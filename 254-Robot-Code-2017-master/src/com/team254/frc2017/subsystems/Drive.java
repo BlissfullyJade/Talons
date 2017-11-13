@@ -797,7 +797,7 @@ public class Drive extends Subsystem {
         mRightSlave1.set(-6.0f);
         Timer.delay(4.0);
         final double currentRightSlave = mRightSlave1.getOutputCurrent();
-        final double rpmRightSlave = mRightMaster1.getSpeed();
+        final double rpmRightSlave = mRightMaster.getSpeed();
         mRightSlave1.set(0.0f);
 
         Timer.delay(2.0);
@@ -819,7 +819,7 @@ public class Drive extends Subsystem {
         mLeftSlave1.set(6.0f);
         Timer.delay(4.0);
         final double currentLeftSlave = mLeftSlave1.getOutputCurrent();
-        final double rpmLeftSlave = mLeftMaster1.getSpeed();
+        final double rpmLeftSlave = mLeftMaster.getSpeed();
         mLeftSlave1.set(0.0);
 
         mRightMaster.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
